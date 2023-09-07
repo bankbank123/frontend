@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.centered-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: auto;
+}
+
+.back-color {
+    width: 100%;
+    color: white;
+    background: #5f9ea0;
+    text-align: center;
+    border-bottom: none;
+    border-radius: 10px 10px 0px 0px;
+    padding: 20px;
+}
+
+h4 {
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.box-shadow {
+    box-shadow: 0px 0px 8px 1px #000000;
+    border-radius: 10px 10px 0px 0px;
+    width: 40%;
+    height: fit-content;
+}
+
+.update-button {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    width: 30%;
+    height: 50px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+h2 {
+    font-weight: normal;
+}
+
+a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}

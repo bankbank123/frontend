@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+body {
+    height: 100vh;
+}
+
+table {
+    border-collapse: collapse;
+    width: auto;
+    border: 2px solid black;
+    margin: 10px;
+    height: auto;
+}
+
+table td, table th {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+}
+
+tbody {
+    background-color: #afafaf6f;
+}
+
+.edit {
+    color: green;
+}
+
+.delete {
+    color: red;
+}
+
+.nav-fill {
+    display: flex;
+    width: 100%;
+}
+
+.nav-search-field {
+    display: flex;
+    min-width: 725px;
+    width: auto;
+}
+
+.search-box {
+    display: none;
+    padding-left: 2px;
+    padding-bottom: 2px;
+    font-weight: 700;
+}
+
+.nav-input {
+    top: 0;
+    left: 0;
+    width: 100%;
+    line-height: 15px;
+    padding: 7px 10px 10px 0;
+    margin: 0;
+    border: 0;
+    height: 40px;
+    font-family: inherit;
+    font-size: 15px;
+    background-color: white;
+    color: #111;
+    border: #111 0.5px solid;
+    outline: 0;
+    -webkit-appearance: none;
+    box-shadow: none;
+    text-indent: 8px;
+    direction: ltr;
+    max-width: 50px;
+    margin-left: 5px;
+    text-align: center;
+}
+
+.nav-input-search {
+    top: 0;
+    left: 0;
+    width: 100%;
+    line-height: 15px;
+    padding: 7px 10px 10px 0;
+    margin: 0;
+    border: 0;
+    height: 40px;
+    font-family: inherit;
+    font-size: 15px;
+    background-color: white;
+    color: #111;
+    border: #111 0.5px solid;
+    outline: 0;
+    -webkit-appearance: none;
+    box-shadow: none;
+    text-indent: 8px;
+    direction: ltr;
+    max-width: 95px;
+    margin-left: 5px;
+    text-align: center;
+}
+
+.nav-search-submit-text {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: static;
+    float: none;
+    -webkit-box: 1;
+    -moz-box: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    width: auto;
+    height: auto;
+    background-position: 2px -280px;
+    text-indent: -500px;
+}
+
+.nav-search-button {
+    width: 45px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 4px 4px 0px;
+    background-color: #F3E46C;
+    border: none;
+}
+
+.nav-search-button:hover {
+    background-color: #c7ba5a;
+}
+
+.nav-search-button-icons {
+    display: flex;
+    width: 30px;
+    height: 30px;
+}
+
+.container-button {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 40px;
+    border-radius: 10px;
+    max-width: 100px;
+    padding-bottom: 5px;
+}
+
+.Previous-button {
+    width: 100%;
+    min-width: 150px;
+    border: none;
+}
+
+.Next-button {
+    width: 100%;
+    min-width: 150px;
+    border: none;
+    margin-left: 10px;
+}
+
+.page-text {
+    font-size: 26px;
+    width: 100%;
+    margin-left: 5px;
+}
+
+.insert-customer {
+    width: 100%;
+    display: inline;
+}
+
+.insert-button{
+    background: none;
+    border: none;
+}
+
+.insert-a{
+    border: none;
+    background-color: greenyellow;
+    font-weight: bold;
+    font-size: 16px;
+    width: 75px;
+    height: 100%;
+    margin-left: 50px;
+}
+
+
+
