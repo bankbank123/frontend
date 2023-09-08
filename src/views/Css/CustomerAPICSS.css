@@ -102,7 +102,7 @@ tbody {
     direction: ltr;
     max-width: 95px;
     margin-left: 5px;
-    text-align: center;
+    text-align: left;
 }
 
 .nav-search-submit-text {

@@ -1,12 +1,14 @@
-import { Link} from 'react-router-dom'
+import './Css/HomePaegCss.css'
 
 export default function HomePage() {
     return (
         <div>
-            HomePage
-            <div>
-                <Link to="/customer">customer</Link>
+            <h3>HomePage</h3>
+            <div className="container-link">
+                <a href="/customer" className='link'>Customers table</a>
+                <a href="/item" className='link'>Items table</a>
             </div>
+
         </div>
     )
 }

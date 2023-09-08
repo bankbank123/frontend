@@ -82,7 +82,7 @@ export default function CustomersEdit() {
         <div>
             <div className="centered-container">
                 <div className="h-70 w-40 d-flex flex-column box-shadow">
-                    <form onSubmit={onSubmit}>
+                    <form onSubmit={onSubmit} >
                         <div className="p-2 back-color">
                             <h3>Update Information</h3>
                         </div>

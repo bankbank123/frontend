@@ -3,14 +3,14 @@ import { useState, useEffect } from 'react';
 import './Css/CustomerAPICSS.css'
 import { AiFillEdit, AiFillDelete } from 'react-icons/ai'
 import { BiSearch } from 'react-icons/bi'
-import { Outlet } from 'react-router-dom';
+
 
 export default function CustomersAPI() {
   const [customers, setCustomers] = useState([]);
   const [pages, setPages] = useState(1)
   const [firstidData, setFirstidData] = useState(0)
   const [lastidData, setLastidData] = useState(25)
-  // const [dataSearch, setDataSearch] = useState()
+  const [dataSearch, setDataSearch] = useState('')
   const PageSize = Math.ceil((customers.length) / 25)
 
 
@@ -49,7 +49,6 @@ export default function CustomersAPI() {
   }
 
   const SelectData = (page) => {
-    console.log(page)
     let Num_Page = (customers.length) / 25
     for (let index = 1; index <= Math.ceil(Num_Page); index++) {
       if (page == index) {
@@ -79,27 +78,51 @@ export default function CustomersAPI() {
   }
 
 
+  const onClickSearch = async () => {
+    if (!dataSearch) {
+      alert("Please insert Data")
+    }
+    try {
+      const search_customer = await axios.get(`http://127.0.0.1:8000/api/customers/search/${dataSearch}`)
+      setFirstidData(search_customer.data._id - 1)
+      setLastidData(search_customer.data._id)
+    } catch (e) {
+      alert("Data not found")
+      console.error(e)
+    }
+  }
+
+
+
+
 
   return (
     <div>
-      
+
       <h2>Customers</h2>
+
       <div className="container-button">
         <div className="nav-fill">
           <div className="nav-search-field">
-            <label className='search-box'>Search Goods</label>
-            <input type="text" id="searchtextbox" autoComplete='off' placeholder='UID000000' className='nav-input-search' tabIndex="0" aria-label='Search Goods' spellCheck="false"  />
+            <label className='search-box'>Search UID</label>
+            <input type="text" id="searchtextbox" autoComplete='off' placeholder='UID000000' className='nav-input-search' tabIndex="0" aria-label='Search Goods' spellCheck="false" onChange={(e) => {
+              setDataSearch(e.target.value)
+            }} />
           </div>
         </div>
 
         <div className="d-inline">
           <div className="d-flex">
             <span className="nav-search-submit-text" id='nav-search-submit-text'>
-              <button className='nav-search-button'><BiSearch className='nav-search-button-icons' /></button>
+              <button className='nav-search-button' onClick={() => onClickSearch()}><BiSearch className='nav-search-button-icons' /></button>
             </span>
           </div>
         </div>
       </div>
+
+
+
+
 
       <table>
         <thead>
